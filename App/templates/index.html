@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <h1 class="main-heading">Find The Latest Update On Corona Virus</h1>
+  <form action="" method="POST" class="form">
+    {% csrf_token %}
+    {{form.country_name}}
+    <button type="submit"><i class="fas fa-search"></i></button>
+  </form>
+  {% for corona in main_data %}
+  <div class="country">
+    <div class="name">
+      <h1>{{corona.country}}</h1>
+    </div>
+    <div class="cases">
+      <label for="">Total Cases: </label>
+      {{corona.cases}}
+    </div>
+    <div class="recovered">
+      <label for="">Total Recovered: </label>
+      {{corona.recovered}}
+    </div>
+    <div class="death">
+      <label for="">Total Deaths: </label>
+      {{corona.deaths}}
+    </div>
+    <div class="close">
+      <a href="{% url 'delete' corona.country %}"> <button><i class="fas fa-times-circle"></i></button></a>
+    </div>
+  </div>
+  {% endfor %}
+</body>
+
+</html>

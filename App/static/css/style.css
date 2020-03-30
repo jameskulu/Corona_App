@@ -1,0 +1,123 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: linear-gradient(to right, rgb(134, 134, 182),rgb(79, 79, 158));
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-heading{
+  flex: 1 1 80px;
+  font-size: 33px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  flex: 1;
+  margin-top: 10px;
+}
+.input{
+  padding: 10px 30px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+.input:focus{
+  /* border: 2px solid rgb(100, 5, 25); */
+  border: 2px solid black;
+  padding: 8px 28px;
+}
+
+button{
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  background:transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+}
+
+button:hover{
+  background-color:white;
+  /* background-color: rgb(135, 124, 148); */
+  color: black;
+  
+}
+
+.country{
+  flex:2;
+  background-color:white;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  transition:all 0.4s ease;
+}
+
+.country:hover{
+  transform: translateY(-5px);
+  filter: drop-shadow(0px 3px 5px black);
+}
+
+
+
+.name h1{
+  text-transform: capitalize;
+}
+
+.close button{
+  background-color: black;
+  position: relative;
+  bottom:140px;
+  left: 170px;
+  outline: none;
+}
+
+.close button:hover{
+  background-color: white;
+  border: 1px solid black;
+}
+
+
+
+
+/* Media query */
+
+@media screen and (max-width:720px){
+
+  .main-heading{
+    font-size: 27px;
+  }
+
+  .name h1{
+    font-size: 22px;
+  }
+
+}
+
+
+
+@media screen and (max-width:580px){
+  .main-heading{
+    font-size: 21px;
+  }
+}
